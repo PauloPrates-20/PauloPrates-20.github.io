@@ -1,0 +1,272 @@
+:root{
+    --barColor: rgb(21, 59, 77);
+    --backColor: rgb(77,76,76);
+    --barHov: rgb(9, 38, 53);
+}
+
+body{
+    background-color: var(--backColor);
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::after{
+    content: '';
+    display: block;
+    height: 100px;
+}
+
+/*barra de navegação*/
+
+.navigation ul{ /*formatação geral da lista de links*/
+    margin: 0;
+    padding: 0;
+    background-color: var(--barColor);
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navigation li{  /*alinhamento dos elementos da lista à esquerda*/
+    float: left;
+}
+
+.navigation a{ /*formatação dos elementos da lista*/
+    display: inline-block;
+    padding: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navigation a:hover:not(.active){ /*sombreamento dos elementos da lista*/
+    background-color: var(--barHov);
+    cursor: default;
+}
+
+/*criação do dropdown*/
+
+.dropdown-content{ /*formatação geral dos elementos de dropdown*/
+    display: none; /*deixa os elementos invisíveis*/
+    position: absolute;
+    background-color: #f9f9f9;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{ /*formatação de texto dos elementos de dropdown*/
+    color: black;
+    display: block;
+}
+
+.dropdown-content a:hover{ /*sombreamento dos elementos de dropdown*/
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content{ /*visibilidade do dropdown*/
+    display: block;
+  }
+
+.active{ /*mudar cor do link ativo*/
+    background-color:var(--barHov);
+}
+
+/*conteúdo*/
+
+.menuTabelas{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50vh;
+}
+
+.menuTabelas a{
+    margin-top: 20vh;
+    width: 0;
+    flex-grow: 1;
+    opacity: .8;
+    transition: .5s ease;
+    color: white;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menuTabelas a:hover{
+    width: 25%;
+    opacity: 1;
+}
+
+.menuTabelas img{
+    width: 100%;
+    height: 500px;
+    object-fit: fill;
+}
+
+/*tabelas*/
+
+.tableContainer{
+    width: 65%;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+    /*itens mágicos*/
+
+.generalTable{
+    border: solid 1px;
+    border-color: black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.generalTable td, .generalTable th{
+    color: white;
+    border: solid 1px;
+    border-color: black;
+    background-color: rgb(20, 20, 63);
+    border-collapse: collapse;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+}
+
+    /*tiers*/
+.comum, .comum td, .comum a{
+    color: white;
+}
+
+.incomum, .incomum td, .incomum a{
+    color: rgb(22, 207, 5);
+}
+
+.raro, .raro td, .raro a{
+    color: rgb(68, 148, 253);
+}
+
+.muRaro, .muRaro td, .muRaro a{
+    color: rgb(165, 85, 219);
+}
+
+.lendario, .lendario td, .lendario a{
+    color: rgb(255, 123, 0);
+}
+
+    /*ouro e centro*/
+
+.itemTable th:nth-child(3), .itemTable td:nth-child(3){ /*tabela mágica*/
+    color: gold;
+    text-align: center;
+}
+
+.itemTable td:nth-child(4), .itemTable td:nth-child(5){
+    color:white;
+    text-align: center;
+}
+
+.itemTable td:nth-child(3), .itemTable td:nth-child(4), .itemTable td:nth-child(5), .itemTable th:nth-child(4), .itemTable th:nth-child(5){
+    text-align: center;
+}
+
+.potionTable th:last-child, .potionTable td:last-child{
+    color: gold;
+    text-align: center;
+}
+
+.horseTable th:last-child, .horseTable td:last-child{
+    color: gold;
+    text-align: center;
+}
+
+    /*ajustes*/
+
+.generalTable th{
+    font-size: larger;
+    font-weight: bold;
+    color: gold;
+}
+
+.potionTable td:first-child{
+    width: 80%;
+}
+
+.horseTable td:first-child{
+    width: 80%;
+}
+
+.itemTable td:first-child, .itemTable td:nth-child(2){
+    width: 30%;
+}
+
+.itemTable td:nth-child(3){
+    width: 20%;
+}
+
+.itemTable td:nth-child(4){
+    width: 10%;
+}
+
+.itemTable td:nth-child(5){
+    width: 5%;
+}
+
+.generalTable a{
+    text-decoration: underline;
+}
+
+/*conteúdo colapsável*/
+
+    /*Botão*/
+
+.collapsible{
+    margin: 0;
+    padding: .5vh;
+    width: 100%;
+    text-align: left;
+    font-size: medium;
+    border: none;
+    outline: solid 1px black;
+    background-color: var(--barColor);
+}
+
+.expanded, .collapsible:hover{
+    background-color: var(--barHov);
+    border: none;
+}
+
+.collapsible:after{
+    content: '\25BC';
+    font-size: medium;
+    float: right;
+    margin-right: 1vw;
+    color: black;
+}
+
+.expanded:after{
+    content: '\25B2';
+    color: black;
+}
+
+    /*conteúdo*/
+
+.content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/*rodapé*/
+
+.foot{ /*formatação geral do rodapé*/
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--barColor);
+    color: whitesmoke;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
