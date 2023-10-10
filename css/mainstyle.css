@@ -1,3 +1,7 @@
+h2{
+    color: white;
+}
+
 :root{
     --barColor: rgb(21, 59, 77);
     --backColor: rgb(77,76,76);
@@ -39,7 +43,7 @@ body::after{
     text-decoration: none;
 }
 
-.navigation a:hover:not(.active){ /*sombreamento dos elementos da lista*/
+.links a:hover:not(.active, .drop){ /*sombreamento dos elementos da lista*/
     background-color: var(--barHov);
     cursor: default;
 }
@@ -60,8 +64,9 @@ body::after{
     display: block;
 }
 
-.dropdown-content a:hover{ /*sombreamento dos elementos de dropdown*/
-    background-color: #f1f1f1;
+.drop:hover{
+ /*sombreamento dos elementos de dropdown*/
+    background-color: gainsboro;
 }
 
 .dropdown:hover .dropdown-content{ /*visibilidade do dropdown*/
@@ -94,7 +99,7 @@ body::after{
 }
 
 .menuTabelas a:hover{
-    width: 25%;
+    width: 20%;
     opacity: 1;
 }
 
@@ -107,6 +112,7 @@ body::after{
 /*tabelas*/
 
 .tableContainer{
+    margin-left: .5%;
     width: 65%;
     margin-bottom: 20vh;
     margin-top: 20vh;
@@ -256,6 +262,84 @@ a{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+}
+
+/*ficha*/
+
+    /*tutorial*/
+
+.tutorial{
+    border: solid 1px;
+    margin-left: 1vw;
+    margin-right: 10vw;  
+    margin-top: 15vh;
+    float: right;
+    width: 25%;
+    background-color: var(--barColor);
+}
+
+.tutorial h3{
+    padding-left: 1%;
+    color:white;
+}
+
+    /*pdf*/
+
+.ficha{
+    margin-top: 5vh;
+}
+
+.ficha object{
+    width: 62%;
+    height: 1050px;
+}
+
+/*calculator*/
+
+.formCont{
+    margin: auto;
+    margin-top: 20vh;
+    width: 40%;
+    height: fit-content;
+    background-color: var(--barColor);
+}
+
+form{
+    width: 100%;
+    text-align: center;
+}
+
+#level{
+    width: 35px;    
+}
+
+#con{
+    width: 45px;
+}
+
+.formElem{
+    padding: 5%;
+    width: 75%;
+    margin: auto;
+    color: white;
+}
+
+.out{
+    width: 40%;
+    color: white;
+    text-align: center;
+    padding: 1% 0%;
+    margin: auto;
+    margin-top: 5%;
+    background-color: var(--barColor);
+}
+
+.out p{
+    font-weight: bold;
+}
+
+.out span{
+    font-weight: normal;
 }
 
 /*rodapé*/

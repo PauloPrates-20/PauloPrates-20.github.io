@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>CALCULADORA</title>
+        <link rel="stylesheet" href="../css/mainstyle.css">
+        <link rel="icon" href="../imagens/d20.png">
+    </head>
+    <body>
+        <nav class="navigation">
+            <ul class="links"> <!-- lista de links -->
+                <li>
+                   <a href="../index.html">HOME</a>
+                </li>
+                <li class="dropdown">
+                    <a>LISTAS</a>
+                    <div class="dropdown-content">
+                       <a class="drop" href="magic.html">ITENS MÁGICOS</a>
+                       <a class="drop" href="potion.html">CONSUMÍVEIS</a>
+                       <a class="drop" href="horse.html">MONTARIAS</a>
+                    </div>
+                </li>
+                <li>
+                   <!-- <a href="ficha.html">FICHAS</a> -->
+                </li>
+                <li class="dropdown">
+                   <a class="active">FERRAMENTAS</a>
+                   <div class="dropdown-content">
+                       <a class="drop">CALCULADORA DE HP</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="formCont">
+            <form>
+                <div class="formElem">
+                    <h2>Calculadora de HP</h2>
+                    <label for="level">Nível: </label>
+                    <input class="stats" type="number" id="level" name="level" min="1" max="20" value="1">
+                    <label for="classes">Classe: </label>
+                    <select class="stats" id="classes" name="classes">
+                        <option value="artifice">Artífice</option>
+                        <option value="barbaro">Bárbaro</option>
+                        <option value="bardo">Bardo</option>
+                        <option value="bruxo">Bruxo</option>
+                        <option value="clerigo">Clérigo</option>
+                        <option value="druida">Druida</option>
+                        <option value="feiticeiro">Feiticeiro</option>
+                        <option value="guerreiro">Guerreiro</option>
+                        <option value="ladino">Ladino</option>
+                        <option value="mago">Mago</option>
+                        <option value="monge">Monge</option>
+                        <option value="paladino">Paladino</option>
+                        <option value="patrulheiro">Patrulheiro</option>
+                    </select><br>
+                    <label for="con">Modificador de Constituição: </label>
+                    <input class="stats" type="number" id="con" name="con" min="-100" max="100" value="0"><br>
+                    <label for="tough">Robusto? </label>
+                    <input class="stats" type="checkbox" id="tough" name="tough" value="yes">
+                    <label for="hill">Anão da Colina? </label>
+                    <input class="stats" type="checkbox" id="hill" name="hill" value="yes"><br>
+                    <label for="dragon">Feiticeiro Dracônico? </label>
+                    <input class="stats" type="checkbox" id="dragon" name="dragon" value="yes"> 
+                </div>
+            </form>
+        </section>
+        <section class="out">
+            <p>HP: <span id="hpOut"></span></p>
+            <p>Dado de Vida: <span id="diceOut"></span></p>
+            <p>HP no nível 1: <span id="lvl1"></span></p>
+            <p>HP nos níveis seguintes: <span id="nextLvl"></span></p>
+        </section>
+        <footer class="clear foot">
+            <h4>RPG SERVER 'DATABASE'</h4>
+            <p id="revP"></p>
+        </footer>
+
+       <script src="../scripts/hpc.js"></script>
+       <script src="../scripts/revision.js"></script>
+
+    </body>
+</html>
