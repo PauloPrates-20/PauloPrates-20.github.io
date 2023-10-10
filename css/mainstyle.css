@@ -332,6 +332,7 @@ form{
     margin: auto;
     margin-top: 5%;
     background-color: var(--barColor);
+    margin-bottom: 20vh;
 }
 
 .out p{
