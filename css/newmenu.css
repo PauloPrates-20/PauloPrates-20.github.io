@@ -24,6 +24,8 @@ h2{
 }
 
 .shape{
+    position: relative;
+    box-sizing: border-box;
     /* outline: solid 1px white; */
     display: inline-block;
     text-align: center;
@@ -32,13 +34,24 @@ h2{
 }
 
 .shape img{
-    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: solid 1px white; */
     display: block;
     width: 80%;
-    height: 70%;
+    height: 65%;
     object-fit: fill;
-    transition: width ease .2s;
+    transition: width ease 1s;
+    transition: heigth ease 1s;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    opacity: 0.5;
+    -webkit-filter: grayscale(75%);
+    -moz-filter:    grayscale(75%);
+    -ms-filter:     grayscale(75%);
+    -o-filter:      grayscale(75%);
+    filter: grayscale(75%);
 }
 
 .menu a{
@@ -51,4 +64,26 @@ h2{
 
 .shape img:hover{
     width: 90%;
+    height: 75%;
+    opacity: 1;
+    filter: brightness(130%);
+}
+
+.shape span{
+    position: absolute;
+    width: 82%;
+    height: 67%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.shape img:hover+span{
+    width: 92%;
+    height: 77%;
+    opacity: 1;
 }

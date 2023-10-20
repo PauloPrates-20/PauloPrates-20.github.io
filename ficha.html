@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>FICHA DE PERSONAGEM</title>
+        <link rel="stylesheet" href="../css/mainstyle.css">
+        <link rel="icon" href="../imagens/d20.png">
+    </head>
+    <body>
+        <nav class="navigation">
+            <ul class="links"> <!-- lista de links -->
+               <li>
+                   <a href="../index.html">HOME</a>
+               </li>
+               <li class="dropdown">
+                   <a>LISTAS</a>
+                   <div class="dropdown-content">
+                       <a class="drop" href="magic.html">ITENS MÁGICOS</a>
+                       <a class="drop" href="potion.html">CONSUMÍVEIS</a>
+                       <a class="drop" href="horse.html">MONTARIAS</a>
+                   </div>
+               </li>
+               <li>
+                   <a class="active">FICHAS</a>
+               </li>
+               <li class="dropdown">
+                   <a>FERRAMENTAS</a>
+                   <div class="dropdown-content">
+                       <a class="drop" href="hpcalculator.html">CALCULADORA DE HP</a>
+                   </div>
+               </li>
+           </ul>
+       </nav>
+       <section class="tutorial">
+            <h3>Tutorial</h3>
+            <button type="button" class="collapsible comum tutorialButton">Primeiros Passos</button>
+       </section>
+       <section class="ficha">
+            <object data="../uploads/dd-5e.pdf" type="application/pdf"></object>
+       </section>
+       <footer class="clear foot">
+        <h4>RPG SERVER 'DATABASE'</h4>
+        <p id="revP"></p>
+    </footer>
+
+    <script src="../scripts/revision.js"></script>
+
+    </body>
+</html>
