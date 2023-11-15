@@ -18,7 +18,7 @@ const dices = {
     bruxo: 8,
     clerigo: 8,
     druida: 8,
-    feiticeiro: 8,
+    feiticeiro: 6,
     guerreiro: 10,
     ladino: 8,
     mago: 6,
