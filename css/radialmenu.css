@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.wrap {
+  box-sizing: border-box;
+  width: 60vmin;
+  height: 60vmin;
+  margin: 10vh auto;
+  background: inherit;
+  transform: scale(0.3) translatez(0px);
+  opacity: 0;
+  transition: transform .5s, opacity .5s;
+}
+
+.wrap a {
+  border-radius: 100%;
+  position: absolute;
+  /* left: 0;
+  top: 0; */
+  width: 40%;
+  height: 40%;
+  overflow: hidden;
+  transform: scale(.5) translateZ(0px);
+  background: #585247;
+}
+
+.wrap a div {
+  height: 100%;
+  background-size: cover;
+  opacity: .5;
+  transition: opacity .5s;
+  border-radius: inherit;
+}
+
+.wrap a:nth-child(1) {
+  left: 25%;
+  top: -50%;
+  /* border-radius: 40vmin 0 0 0; */
+  transform-origin: 110% 110%;
+  transition: transform .4s .15s;
+}
+
+.wrap a:nth-child(1) div {
+  background-image: url('../imagens/sotopor.jpg');
+}
+
+.wrap a:nth-child(2) {
+  /* border-radius: 0 40vmin 0 0; */
+  left: 100%;
+  top: 25%;
+  transform-origin: -10% 110%;
+  transition: transform .4s .2s;
+}
+
+.wrap a:nth-child(2) div {
+  background-image: url('../imagens/capital.jpg');
+}
+
+.wrap a:nth-child(3) {
+  /* border-radius: 0 0 0 40vmin; */
+  left: -50%;
+  top: 25%;
+  transform-origin: 110% -10%;
+  transition: transform .4s .25s;
+}
+
+.wrap a:nth-child(3) div {
+  background-image: url('../imagens/camp.jpg');
+}
+
+.wrap a:nth-child(4) {
+  /* border-radius: 0 0 40vmin 0; */
+  top: 75%;
+  left: -25%;
+  transform-origin: -10% -10%;
+  transition: transform .4s .3s;
+}
+
+.wrap a:nth-child(4) div {
+  background-image: url('../imagens/edenRuins.jpg');
+}
+
+.wrap a:nth-child(5){
+  top: -25%;
+  left: 75%;
+  transform-origin: -10% -10%;
+  transition: transform .4s .3s;
+}
+
+.wrap a:nth-child(5) div{
+  background-image: url('../imagens/grunnefelder.png');
+}
+
+.wrap a:nth-child(6){
+  top: -25%;
+  left: -25%;
+  transform-origin: -10% -10%;
+  transition: transform .4s .3s;
+}
+
+.wrap a:nth-child(6) div{
+  background-image: url('../imagens/tower.jpg');
+}
+
+.wrap a:nth-child(7) {
+  width: 45%;
+  height: 45%;
+  left: 22.5%;
+  top: 22.5%;
+  border-radius: 50vmin;
+  box-shadow: 0 0 0 5vmin #E3DFD2;
+  transform: scale(1);
+}
+
+.wrap a:nth-child(7) div {
+  background-image: url('../imagens/dragonIn.jpg');
+}
+
+span:first-child {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top: 50vmin;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 100%;
+  background-image: url('../imagens/worldicon.jfif');
+  background-size: cover;
+  transform: translateZ(0px);
+}
+
+/* span span{
+position:absolute;
+width:60%;height:3px;
+left:20%; top:50%;
+border-radius:0;
+} */
+/* span span:after, span span:before{
+content:'';
+position:absolute;
+left:0; top:0;
+width:100%; height:100%;
+background:inherit;
+} */
+/* span span:after{
+top:0;
+} */
+.wrap:hover {
+  transform: scale(.8) translateZ(0px);
+  opacity: 1;
+}
+.wrap:hover a {
+  transform: scale(1) translatez(0px);
+}
+
+a:hover div {
+  opacity: 1;
+  transform: translatez(0px);
+}
+
+.clear {
+  margin-bottom: 20vh;
+}

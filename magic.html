@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>ITENS MÁGICOS</title>
+        <link rel="stylesheet" href="css/mainstyle.css">
+        <link rel="icon" href="imagens/d20.png">
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+        <script src="scripts/retrieveTable.js"></script>
+        <!-- <Script src="scripts/tabStore.js"></Script> -->
+    </head>
+    <body>
+        <!-- barra de navegação -->
+        <nav class="navigation">
+            <ul class="links"> <!-- lista de links -->
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="dropdown">
+                    <a class="active">LISTAS</a>
+                    <div class="dropdown-content">
+                        <a class="drop">ITENS MÁGICOS</a>
+                        <a class="drop" href="potion.html">CONSUMÍVEIS</a>
+                        <a class="drop" href="horse.html">MONTARIAS</a>
+                    </div>
+                </li>
+                <li>
+                    <!-- <a href="ficha.html">FICHAS</a> -->
+                </li>
+                <li class="dropdown">
+                    <a>FERRAMENTAS</a>
+                    <div class="dropdown-content">
+                        <a class="drop" href="hpcalculator.html">CALCULADORA DE HP</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a>MUNDO</a>
+                    <div class="dropdown-content">
+                        <!-- <a href="paginas/lore.html" class="drop">HISTÓRIA</a> -->
+                        <a href="ambience.html" class="drop">AMBIENTAÇÃO</a>
+                        <!-- <a href="/paginas/characters.html" class="drop">NPCs</a> -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="tableContainer">
+            <h2>Itens Mágicos</h2>
+            <button type="button" class="collapsible comum">Comum</button>
+            <div class="content">
+                <table class="generalTable itemTable comum">
+                    <tr>
+                        <th>Item (Português)</th>
+                        <th>Item (Inglês)</th>
+                        <th>Valor</th>
+                        <th>Sintonização</th>
+                        <th>Reforja</th>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible incomum">Incomum</button>
+            <div class="content">
+                <table class="generalTable itemTable incomum">
+                    <tr>
+                        <th>Item (Português)</th>
+                        <th>Item (Inglês)</th>
+                        <th>Valor</th>
+                        <th>Sintonização</th>
+                        <th>Reforja</th>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible raro">Raro</button>
+            <div class="content">
+                <table class="generalTable itemTable raro">
+                    <tr>
+                        <th>Item (Português)</th>
+                        <th>Item (Inglês)</th>
+                        <th>Valor</th>
+                        <th>Sintonização</th>
+                        <th>Reforja</th>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible muRaro">Muito Raro</button>
+            <div class="content">
+                <table class="generalTable itemTable muRaro">
+                    <tr>
+                        <th>Item (Português)</th>
+                        <th>Item (Inglês)</th>
+                        <th>Valor</th>
+                        <th>Sintonização</th>
+                        <th>Reforja</th>
+                    </tr>
+                </table>
+            </div>
+            <button type="button" class="collapsible lendario">Lendário</button>
+            <div class="content">
+                <table class="generalTable itemTable lendario">
+                    <tr>
+                        <th>Item (Português)</th>
+                        <th>Item (Inglês)</th>
+                        <th>Valor</th>
+                        <th>Sintonização</th>
+                        <th>Reforja</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <footer class="foot">
+            <h4>RPG SERVER 'DATABASE'</h4>
+            <p id="revP"></p>
+        </footer>
+        
+        <script src="scripts/colapso.js"></script>
+        <script src="scripts/revision.js"></script>
+
+    </body>
+</html>
