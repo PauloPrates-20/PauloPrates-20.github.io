@@ -403,6 +403,10 @@ form{
     margin-top: 40vh;
 }
 
+#multHead{
+    text-align: justify;
+}
+
 /*rodapé*/
 
 .foot{ /*formatação geral do rodapé*/
