@@ -170,6 +170,6 @@ for (var i = 0; i < inputs.length; i++) {
         outEm.innerHTML = out;
         diceEm.innerHTML = '1d' + currentDice;
         hp1.innerHTML = currentDice + con + feat + dwarf + dragon;
-        nextHp.innerHTML = halfD + halfdOne + halfdTwo + halfdThree + con + feat + dwarf + dragon;
+        nextHp.innerHTML = halfD + con + feat + dwarf + dragon;
     });
 }
