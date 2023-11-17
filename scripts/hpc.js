@@ -1,8 +1,24 @@
-function hpCalc(dice, pLvl, pCon, pFeat, pDwarf, pDragon) {
-    if (pLvl > 1) {
-        let out = dice + pCon + ((dice / 2 + 1) + pCon + pFeat + pDwarf + pDragon) * (pLvl - 1);
-        // console.log(dice/2+1);
-        // console.log(pCon);
+function hpCalc(dice, pLvl, pCon, pFeat, pDwarf, pDragon, mcOne, mcTwo, mcThree, mcLvl) {
+    let halfMain = dice / 2 + 1;
+    let diceOne = 0;
+    let diceTwo = 0;
+    let diceThree = 0;
+
+    if(mcOne > 0){
+        diceOne = mcOne / 2 + 1;
+        // console.log(diceOne);
+    }
+    if(mcTwo > 0){
+        diceTwo = mcTwo / 2 + 1 ;
+    }
+    if(mcThree > 0){
+        diceThree = mcThree / 2 + 1;
+    }
+
+    let halfDice = diceOne + diceTwo + diceThree;
+
+    if (pLvl + mcLvl > 1) {
+        out = (dice + pCon) + (halfMain + pCon) * (pLvl - 1) + (halfDice + pCon) * mcLvl + (pFeat + pDwarf + pDragon) * (pLvl + mcLvl);
         return out;
     }
     else {
@@ -27,16 +43,33 @@ const dices = {
     patrulheiro: 10
 };
 
+
+
 var lvl = document.getElementById('level').value * 1;
+var totalLvl = 1;
 var pClass = document.getElementById('classes').value;
+
+var currentDice = dices[pClass];
+
 var con = document.getElementById('con').value * 1;
 var feat = 0;
 var dwarf = 0;
 var dragon = 0;
+var lvlOne = 0;
+var lvlTwo = 0;
+var lvlThree = 0;
+var multOne = 0;
+var multTwo = 0;
+var multThree = 0;
+var halfdOne = 0;
+var halfdTwo = 0;
+var halfdThree = 0;
+var halfD = currentDice / 2 + 1;
+var multLvl = 0;
 
-var currentDice = dices[pClass];
 
-var out = hpCalc(currentDice, lvl, con, feat, dwarf, dragon);
+
+var out = hpCalc(currentDice, con, feat, dwarf, dragon, multOne, multTwo, multThree, totalLvl);
 // console.log(out);
 
 var outEm = document.getElementById('hpOut');
@@ -85,11 +118,58 @@ for (var i = 0; i < inputs.length; i++) {
                 else {
                     dragon = 0;
                 }
+            case 'lvlOne':
+                lvlOne = this.value * 1;
+                break;
+            case 'lvlTwo':
+                lvlTwo = this.value * 1;
+                break;
+            case 'lvlThree':
+                lvlThree = this.value * 1;
+                break;
+            case 'multOne':
+                if(this.value != "none"){
+                    multOne = dices[this.value];
+                    lvlOne = inputs[6].value * 1;
+                    halfdOne = multOne / 2 + 1;
+                    
+                }
+                else{
+                    multOne = 0;
+                    halfdOne = 0;
+                }
+                break;
+            case 'multTwo':
+                if(this.value != "none"){
+                    multTwo = dices[this.value];
+                    lvlTwo = inputs[8].value * 1;
+                    halfdTwo = multTwo / 2 + 1;
+                }
+                else{
+                    multTwo = 0;
+                    halfdTwo = 0;
+                }
+                break;
+            case 'multThree':
+                if(this.value != "none"){
+                    multThree = dices[this.value];
+                    lvlThree = inputs[10].value * 1;
+                    halfdThree = multThree / 2 + 1;
+                }
+                else{
+                    multThree = 0;
+                    halfdThree = 0;
+                }
+                break
         }
-        out = hpCalc(currentDice, lvl, con, feat, dwarf, dragon);
+        halfD = currentDice / 2 + 1;
+        multLvl = lvlOne + lvlTwo + lvlThree;
+        // console.log(halfdOne, halfdTwo, halfdThree);
+        // console.log(totalLvl);
+        out = hpCalc(currentDice, lvl, con, feat, dwarf, dragon, multOne, multTwo, multThree, multLvl);
         outEm.innerHTML = out;
         diceEm.innerHTML = '1d' + currentDice;
         hp1.innerHTML = currentDice + con + feat + dwarf + dragon;
-        nextHp.innerHTML = (currentDice / 2 + 1) + con + feat + dwarf + dragon;
+        nextHp.innerHTML = halfD + halfdOne + halfdTwo + halfdThree + con + feat + dwarf + dragon;
     });
 }
