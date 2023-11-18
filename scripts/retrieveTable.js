@@ -42,6 +42,7 @@ function createTable(table, type, colFunc){
     ref = $(tierDiv).find("a");
     ref.each(function(){
         $(this).attr("href", table[id].ref);
+        $(this).attr("target", "_blank");
         id += 1;
     });
 
