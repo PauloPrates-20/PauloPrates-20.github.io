@@ -37,7 +37,7 @@ main {
 
 #palavra {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   font-size: 3rem;
   gap: 1rem;
   justify-content: center;
