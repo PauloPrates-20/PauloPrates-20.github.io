@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  /* margin: calc(100vh - 80vh)auto; */
+  background-color: #ba3266;
+  padding: 5rem 2rem;
+
+  /* border-radius: .5rem; */
+}
+
+h1 {
+  font-size: 4.8rem;
+  text-align: center;
+  color: #fff;
+}
+
+main {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#forca img {
+  width: 10rem;
+}
+
+#palavra {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 3rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+}
+
+#teclado {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  gap: .75rem;
+  width: 38rem;
+  align-self: center;
+}
+
+#teclado button {
+  width: 3.5rem;
+  height: 4rem;
+  font-size: 2.4rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: .5rem;
+  text-align: center;
+
+  background-color: #ed71a1;
+  color: #fff;
+
+  border-radius: .3rem;
+  border-color: #fff;
+}
+
+button:active {
+  cursor: default;
+}
+
+@media screen and (min-width: 468px) {
+  .container {
+    width: 48rem;
+    margin: calc(100vh - 80vh) auto;
+    border-radius: .5rem;
+    border: .1rem solid #8e0744;
+  }
+}
