@@ -35,10 +35,11 @@ function verificarLetra(gatilho) {
     if (!acerto) {
       erros++;
       forca.attr('src', `assets/hangman/${erros}.png`);
-      acerto = false;
     }
   } 
-
+  
+  acerto = false;
+  
   andamento = verificarEstado(palavraAtual);
   
   if (andamento == 'perdeu') {
