@@ -14,7 +14,7 @@ function f(x, a) {
 
 // Generate x-axis points for x from -2 to 2
 const xValues = [];
-for (let x = -2; x <= 2; x += 0.02) {
+for (let x = -2; x <= 2; x += 0.01) {
   xValues.push(x);
 }
 
@@ -24,7 +24,7 @@ const chart = new Chart(ctx, {
   data: {
     labels: xValues,
     datasets: [{
-      label: 'Animated Function f(x)',
+      label: 'Um coração pra você',
       data: [],
       borderColor: 'rgba(255, 90, 90, 1)', // Custom color
       borderWidth: 2,
@@ -34,7 +34,7 @@ const chart = new Chart(ctx, {
     }]
   },
   options: {
-    responsive: false, // Set to false since we're using fixed dimensions
+    responsive: false, // Set to false to use fixed dimensions
     maintainAspectRatio: false, // Allows for specified height/width
     scales: {
       x: {
@@ -47,8 +47,8 @@ const chart = new Chart(ctx, {
         }
       },
       y: {
-        min: -1.5, // Adjusting y-axis min value
-        max: 2.5,  // Adjusting y-axis max value
+        min: -1.5,
+        max: 2.5,
         title: {
           display: true,
           text: 'f(x)'
