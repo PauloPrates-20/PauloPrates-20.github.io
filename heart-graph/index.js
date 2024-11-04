@@ -65,9 +65,9 @@ let direction = 1; // 1 for increasing, -1 for decreasing
 
 function animate() {
   // Update the parameter a
-  if (a >= 15) {
+  if (a >= 18.5) {
     direction = -1; // Change direction to decrease
-  } else if (a <= -15) {
+  } else if (a <= -18.5) {
     direction = 1; // Change direction to increase
   }
   a += direction * 0.065; // Increment or decrement a
